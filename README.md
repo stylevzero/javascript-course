@@ -1,1 +1,1 @@
-# javascript-basic
+# javascript-course

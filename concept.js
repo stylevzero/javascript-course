@@ -152,8 +152,51 @@ console.log(resultado); // true
 /* 
 && El operador AND
 || El operador OR
-! El operador de negaciòn o NOT
-?? El operador nulli coalescing // fusión de nuelos o unión nulosa
+!  El operador de negaciòn o NOT
+?? El operador nulli coalescing // fusión de nulos o unión nula
 
 */
 
+console.log(true && true); // true
+console.log(true && false); // false
+console.log(false && true); // false
+console.log(false && false); // false
+
+/*
+edad=28;
+console.log(edad > 18 && edad < 30); // true
+console.log(edad > 18 && edad < 25); // false
+console.log(10 && 0); // Retorna el primer valor falso 0
+console.log(10 && 20); // 20
+console.log(20 && 10); // 10
+console.log(0 && true && false); // 0
+console.log(20 && 5 && false); // false
+console.log(edad);
+*/
+
+console.log(true || true); // true
+console.log(true || false); // false
+console.log(false || true); // false
+console.log(false || false); // false
+
+edad = 20;
+console.log(edad > 18 || edad < 30); // true
+console.log(edad > 18 || edad < 25);
+
+// Operador negación
+
+console.log(!0); // true
+console.log(!1); // false
+console.log(!""); // true
+console.log(!"prueba"); // false
+console.log(! 10 > 15); // true
+
+// Nullish coalescing
+
+// Se utiliza para evaluar si es nullo
+// especifcamente, ignora el string vacio, 0
+
+console.log(null ?? "Hola"); // "Hola"
+console.log(undefined ?? "Hola"); // "Hola"
+console.log("" ?? "Hola"); // ""
+console.log(false ?? "Hola"); // false
