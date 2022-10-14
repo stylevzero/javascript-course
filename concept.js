@@ -200,3 +200,102 @@ console.log(null ?? "Hola"); // "Hola"
 console.log(undefined ?? "Hola"); // "Hola"
 console.log("" ?? "Hola"); // ""
 console.log(false ?? "Hola"); // false
+
+// Condiciones
+
+// condicion de una sola línea
+if(10) console.log("10 es truthy");
+if(10)
+  console.log("10 es truthy");
+
+// Ejemplo
+let calificacion = 9;
+if(calificacion == 10){
+  console.log("Excelente");
+}else if(calificacion > 7){
+  console.log("Muy bien");
+}else if(calificacion > 5){
+  console.log("Puedes mejorar");
+}else {
+  console.log("Reprobado");
+}
+
+// Ciclos
+
+// Ciclo For
+// Imprimir números del 1 al 10
+
+/*
+1. Instrucción inicial
+2. Condición
+3. Instrucción después de cada iteracción
+*/
+
+// Break termina el ciclo
+// Continue lo que hace es saltarse la iteracción
+
+for(let i = 1; i <= 10; i++){
+  console.log("Número " + i);
+  /*
+  if(i == 5){
+    break; // Salir del ciclo
+  }
+  */
+  if(i % 2 == 0){ continue;}
+  console.log("Es par");
+
+}
+console.log("Hola");
+
+
+// Ciclo While
+let i = 1;
+while(i <= 10) {
+  console.log("Número: " + i);
+  i++;
+}
+
+// Ciclo Do wile
+
+/*
+do{
+  console.log();
+} while (prompt());
+*/
+
+/* undefined, null y NaN */
+
+/* undefined, indica que, 
+se le asigna a una variable cuando no tiene valor
+cuando nunca se le ha asignado un valor o cuando no ha sido declarada
+
+typeof () Sirve para obtener el tipo que tiene un dato
+*/
+
+
+console.log(typeof ejemplo); // undefined
+let name;
+console.log(typeof name);    // undefined
+
+
+/* 
+
+Null hablamos de un objeto especial en javascript que indica la ausencia de valor
+a diferencia de undefined que es un tipo de datos, null es un objeto que es asignable;
+
+*/
+
+name=null;
+console.log(typeof name); // object
+
+/* 
+NaN representa a algo que no es un nùmero
+*/
+
+/* 
+Si comparamos una cadena con un número obtenemos como resultado NaN
+*/
+
+console.log("ejemplo" * 3);
+
+console.log(10/0); //Infinity valor que representa el infinito
