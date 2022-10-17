@@ -4,11 +4,9 @@ let nombre = "stylevzero";
 
 // constante
 const height = 170;
-
 console.log(nombre);
 
 let edad = 20;
-
 let cambio = 165;
 
 console.log(edad * cambio);
@@ -17,11 +15,11 @@ console.log(Math.PI)
 /* 
 Tipos
 
-string String ()
-number Number()
+string  String ()
+number  Number()
 boolean Boolean()
-undefined
 symbol Symbol()
+undefined
 null
 
 BigInt()
@@ -72,12 +70,10 @@ console.log(resultado); // true
 resultado = Boolean(0);
 console.log(resultado); // true
 
-/* Son los valores o las expresiones
- o los objetos que evaluan a falso
-  cuando se conviertan a booleanos
-  cualqueir toro se evalua a verdadero
-
-Nan, null, 0, -0, “”, y false
+/*
+  Valores, expresiones o objetos que evaluan a falso
+  cuando se conviertan a booleanos cualqueir otro se evalua a verdadero
+  Nan, null, 0, -0, “”, y false
   */
 
 // Operadores de comparación
@@ -144,8 +140,7 @@ console.log(resultado); // false
 resultado = edad !== 20;
 console.log(resultado); // true
 
-// En el estrcitamente, compara tipo y valor
-
+// En modo estricto, compara tipo y valor
 
 // Operadores lógicos
 
@@ -194,7 +189,7 @@ console.log(! 10 > 15); // true
 // Nullish coalescing
 
 // Se utiliza para evaluar si es nullo
-// especifcamente, ignora el string vacio, 0
+// especificamente, ignora el string vacio, 0
 
 console.log(null ?? "Hola"); // "Hola"
 console.log(undefined ?? "Hola"); // "Hola"
