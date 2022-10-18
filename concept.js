@@ -294,3 +294,4 @@ Si comparamos una cadena con un número obtenemos como resultado NaN
 console.log("ejemplo" * 3);
 
 console.log(10/0); //Infinity valor que representa el infinito
+
