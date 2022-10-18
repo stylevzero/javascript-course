@@ -73,3 +73,34 @@ function sumaTodos(){
 console.log(arguments); // Impresión de todos los argumentos que se han enviado
 }
 sumaTodos(1,2,3,4);
+
+// Pasar por valor y referencia (Una vez ejecutada la función)
+
+// Referencia -> parametro apunta a la misma dirección que el argumento original
+// Valor -> se envia una copia del argumento original
+
+
+// Ejemplo de Valor
+/*
+let edad = 20;
+function modificador(edad){
+    edad = 25;
+    console.log("Dentro de la función " + edad);
+}
+console.log(edad);
+modificador(edad);
+console.log(edad);
+*/
+
+// Ejemplo de Referencia
+let edades = [20];
+function modificador(edades){
+    edades[0] = 25;
+    console.log("Dentro de la función " + edades);
+}
+console.log(edades);
+modificador(edades);
+console.log(edades);
+
+
+// Funciones puras
