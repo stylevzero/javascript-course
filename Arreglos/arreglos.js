@@ -134,3 +134,38 @@ let html = nombres.reduce(function(acc, elem){
     return acc + "<li>" + elem + "</li>";
 }, "");
 console.log(html);
+
+// Buscar un elemento en un array
+
+let framework = ["angular", "react", "vue", "ember", "svelte"];
+
+//indexOf   -> === --> posicion
+//includes  -> === --> true|false
+//find      -> función prueba -> elemento encontrado
+//findIndex -> función prueba -> posicion
+//some      -> función prueba -> true|false
+
+//console.log(framework.indexOf("react")); // 1 (posicion 1)
+console.log(framework.indexOf("reacts")); // -1 No lo encuentra
+
+//includes (indica sólo si existe, no indica posición)
+console.log(framework.includes("react"))     // true
+console.log(framework.includes("knockout", 1))  // false, 2do arg indica desde que elemento empieza a buscar
+
+//find
+let respuesta = framework.find(function(el,posicion,arreglo){
+    return el === "react";
+});
+console.log(respuesta)
+
+//findIndex
+let resp = framework.findIndex(function(el,posicion,arreglo){
+    return el === "react";
+});
+console.log(resp) // Retorna la posicion donde la encontro
+
+//some
+let response = framework.some(function(el,posicion,arreglo){
+    return el === "react";
+});
+console.log(response) // Al encontrarlo retorna true
