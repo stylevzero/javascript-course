@@ -169,3 +169,36 @@ let response = framework.some(function(el,posicion,arreglo){
     return el === "react";
 });
 console.log(response) // Al encontrarlo retorna true
+
+// Spread y rest sintax
+
+// Iterable
+// Spread syntax (...) (expande los elementos)
+
+let arr = [1,2,3];
+let nombre = "stylevzero";
+
+console.log(arr);           // 1,2,3
+console.log(...arr);        // 1
+                            // 2
+                            // 3
+                            
+console.log(nombre);
+console.log(...nombre); // Imprime cada elemento que compone el iterable
+
+// Rest parameter (Inversa del spread)
+//                  Nos permite agrupar elementos
+
+function demo(...arreglonew){
+    console.log(arreglonew);
+}
+demo(10,2);
+
+function promedio(nombre, ...calificaciones){
+    console.log(arguments);
+    console.log(nombre, calificaciones);
+}
+promedio("stylevzero", 5,6,7,9,6);
+
+
+
