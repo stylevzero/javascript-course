@@ -55,15 +55,82 @@ lenguajes.forEach(function(lenguaje, indice, lenguaje){
 
 let numeros = [2,3,5,1,34];
 
+/*
 let cuadrados = [];
 for (let x = 0; x <= array.length; x++) {
     cuadrados[x] = numeros[x] * numeros[x];
     
 }
+*/
+
+let cuadrados = numeros.map(function(numero, indice){
+    return numero * numero;
+})
+
 console.log(array.length);
 console.log(cuadrados);
-/*
-numeros.map(function(){
 
+let numerosNuevos = ["10", "5", "4", "3"];
+
+numeros = numeros.map(function(numString){
+    return parseInt(numString); // Tenemos string  y los convertimos a enteros
 })
+console.log(numerosNuevos);
+console.log(numeros);
+
+// Filter
+
+let numbers = [8,3,4,10,5,3];
+
+// Obtener los valores pares
+
+let nuevoArray = numbers.filter(function(number){
+    return number % 2 === 0; // Se conservan los elementos que la funcion retorna true
+    /*
+    if(number % 2 === 0) {
+        return true;    // Se conservan los elementos que la funcion retorna true
+    }        
+    */
+});
+
+// Obtener los valores impares
+/*
+let nuevoArray = numbers.filter(function(number){
+    return number % 2; // Se conservan los elementos que la funcion retorna true
+});
 */
+console.log(nuevoArray);
+
+
+lenguajes = ["ruby", "php", "javascript", "html", "python", "kotlin"]
+
+let nuevoArreglo = lenguajes.filter(function(lenguaje){
+    return lenguaje != "ruby";
+});
+
+/* 
+let nuevoArreglo = lenguajes.filter(function(lenguaje,indice,arreglo){
+    return lenguaje != "ruby";
+}, {});
+*/
+console.log(nuevoArreglo);
+
+// Reduce
+
+/* Reducir un arreglo a un solo elemento con reduce */
+
+let arregloDeNumeros = [1,2,3,4,5];
+let suma = arregloDeNumeros.reduce(function(acumulador, elemento){
+//console.log(acumulador);
+//return 1;
+return acumulador + elemento;
+}, 0); // El 2do arg es el valor inicial para el acumulador
+console.log(suma); //15
+
+
+let nombres = ["stylevzero", "Desarrollo Web"];
+
+let html = nombres.reduce(function(acc, elem){
+    return acc + "<li>" + elem + "</li>";
+}, "");
+console.log(html);
