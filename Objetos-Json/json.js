@@ -43,3 +43,26 @@ lenguajes = {
 }
 
 console.log(lenguajes.saludar());
+
+// Duplicar o combinar objetos
+let language = {
+    name: "Javascript",
+    version: 1
+}
+
+let newLanguage = {...language, stack: "Backend"};
+let levels = { level: 2};
+
+//Combinar objetos con Spread operator
+let newObject = {...language, ...levels, name: "Go"};
+// Cuando propiedad esta repetida, se mantiene la última
+
+//Combinar objetos con Object assign
+//let objectNew = Object.assign({}, language);
+//let objectNew = Object.assign(language, {level: 1});
+let objectNew = Object.assign(language, levels);
+
+console.log(language);
+console.log(newLanguage);
+console.log(newObject);
+console.log(objectNew);
