@@ -66,3 +66,49 @@ console.log(language);
 console.log(newLanguage);
 console.log(newObject);
 console.log(objectNew);
+
+// Asignacion por desestructuracion
+// Destructuring assignment
+
+let languageNew = {
+    name: "Javascript",
+    stack: "Frontend"
+};
+
+let {name} = languageNew;
+let {stack} = languageNew;
+
+//let {name: nameLanguage} = languageNew;
+let {name: nameLanguage, ...sobrantes} = languageNew;
+console.log(name);
+console.log(stack);
+console.log(nameLanguage);
+console.log(sobrantes);
+
+function print({ name }){
+    console.log(name);
+}
+print(languageNew);
+
+let valores = [8,9,10];
+
+//let [ go, js, c] = valores;
+let [go, ...otrosLenguajes] = valores;
+
+function obtenerLenguajes(){
+    return ["go","javascript", "c#"]
+}
+
+let [ backend, ...otrosLenguajesNuevos] = obtenerLenguajes();
+console.log(backend);
+/*
+function suma([v1, v2]) {
+    console.log(v1 + v2);
+}
+*/
+
+console.log(go);
+//console.log(js);
+//console.log(c);
+console.log(otrosLenguajes);
+//suma([10, 20]);
