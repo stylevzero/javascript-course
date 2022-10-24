@@ -112,3 +112,17 @@ console.log(go);
 //console.log(c);
 console.log(otrosLenguajes);
 //suma([10, 20]);
+
+// Function Construct
+
+function Lenguaje(title){
+    //console.log(this);
+    this.name = title;
+    this.stack = "Backend";
+    this.show = function (){}
+}
+
+let objeto = new Lenguaje("Javascript - JS");
+let python = new Lenguaje("Python");
+console.log(objeto);
+console.log(python);
