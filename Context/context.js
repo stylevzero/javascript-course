@@ -74,4 +74,45 @@ let student = {
 let f = student.greeting;
 f();    // Hola soy undefined
 
-setTimeout(student.greeting, 100);  // Hola soy undefined
+//setTimeout(student.greeting, 100);  // Hola soy undefined
+
+// Arrow functions
+
+// Si la funcion es de una sola línea, se pueden omitir las llaves
+/* Normal
+let demo = () => {
+    console.log("Hello World!");
+}
+*/
+let demo = ()=> console.log("Hello World!"); // Una sola línea
+demo();
+
+let hello = () => {
+    console.log("Hello arrow functions");
+}
+let suma = (a,b)=> a+b; //Al no tener llave se genera un retorno implicito
+console.log(suma(2,3));
+
+// Contexto
+/* 
+Poseen una sintaxis mas corta que la declaración de función
+Heredan el valor de this del contexto en el que fueron creadas
+y no se reasigna
+*/
+
+let programmer = {
+    name: "javascript programmer",
+    greeting: ()=> {console.log("Hello i am " + this.name);},        
+    greetingAlt: function(){console.log("Hello i am " + this.name);}
+
+}
+programmer.greeting();      // Contexto al momento de ser definido (en este punto de la ejecución es el objeto window)
+programmer.greetingAlt();   // Contexto del objeto (programmer) que ejecuta la funcion
+
+function programmerWeb() {
+    this.name = "javascript programmer";
+    this.greeting = ()=> console.log("Hello i am " + this.name);
+}
+
+let e = new programmerWeb();
+e.greeting();
