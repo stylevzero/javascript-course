@@ -109,10 +109,37 @@ let programmer = {
 programmer.greeting();      // Contexto al momento de ser definido (en este punto de la ejecución es el objeto window)
 programmer.greetingAlt();   // Contexto del objeto (programmer) que ejecuta la funcion
 
-function programmerWeb() {
+function ProgrammerWeb() {
     this.name = "javascript programmer";
     this.greeting = ()=> console.log("Hello i am " + this.name);
 }
 
-let e = new programmerWeb();
+let e = new ProgrammerWeb();
 e.greeting();
+
+// Bind, call y apply
+
+// Javascript ofrecen métodos que nos permiten asignar el valor de this
+
+function BackendDeveloper(){
+    this.name = "Uriel";
+    this.greeting = function(){ console.log(this, arguments)}
+
+    this.greeting = this.greeting.bind(this); // ME aseguro de que se conserve el contexto
+}
+
+let b = new BackendDeveloper();
+let c = b.greeting;
+c();
+
+/*
+Métodos que modifican el contexto
+Ejecución Inmediata: call y apply
+          Lazy: bind
+*/
+
+b.greeting.call({}, "1", "2")
+b.greeting.call({}, ["1", "2"])
+
+let newFunction = b.greeting.bind({}, "1", "2");
+newFunction();
