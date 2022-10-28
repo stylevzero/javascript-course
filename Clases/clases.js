@@ -84,3 +84,21 @@ let js = new CourseBackend();
 //console.log(js.#title); // SyntaxError: Private field '#title' must be declared in an enclosing class
 js.welcome();
 //js.#welcomeNew(); //SyntaxError: Private field '#welcomeNew' must be declared in an enclosing class
+
+
+// Método constructor
+
+/* 
+Se puede definir un método especial al que llamamos el método constructor
+que se diferencia del resto de los métodos, este método se ejecuta de manera automática
+cuando instancia un nuevo objeto de una clase
+*/
+
+class CourseFrontend{
+    constructor(titulo, color="yellow"){
+        this.titulo = titulo;
+        this.color = color;
+        console.log(arguments);
+    }
+}
+new CourseFrontend("Course of frontend javascript", 1,2,3,4,5);
