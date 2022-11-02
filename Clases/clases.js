@@ -102,3 +102,79 @@ class CourseFrontend{
     }
 }
 new CourseFrontend("Course of frontend javascript", 1,2,3,4,5);
+
+// Herencia de clases
+
+//Extiende a través de la palabra extends
+class Person{
+    name = "prueba";
+    run() {
+        console.log("Go");
+    }
+
+}
+class Admin extends Person{}
+let admin = new Admin();
+admin.run();
+
+/*
+class Player {
+    play() { 
+        this.video.play
+    }
+    duration() {
+        return this.video.duration /100;
+     }
+}
+
+class Vimeo extends Player {
+    open() {
+        this.redirectToVimeo(this.video)
+    }
+}
+
+class YouTube extends Player {
+    open(){
+        this.redirectToYoutube(this.video)
+    }
+}
+let vimeo = new Vimeo();
+vimeo.play();
+vimeo.duration();
+vimeo.open();
+*/
+
+/* Herencia de objeto del lenguaje */
+class CustomDate extends Date{}
+class CustomArray extends Array{}
+
+/*
+function User() {}
+class Admin extends User{
+
+}
+*/
+
+// Sobre escribir la funcionalidad que estamos heredando
+class User {
+    constructor(name){
+        this.name = name;
+    }
+    greeting(){
+        console.log("Hello user");
+    }
+}
+
+class SuperAdmin extends User{
+    constructor(name) {
+        super(name);
+    }
+    greeting(){
+        super.greeting();
+        console.info("Hello i am Admin");
+    }
+}
+
+let superadmin = new SuperAdmin("Administrator");
+console.log(superadmin);
+//superadmin.greeting();
