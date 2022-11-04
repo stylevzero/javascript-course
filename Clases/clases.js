@@ -208,3 +208,31 @@ let myuser = new MyUser("nombre de ejemplo");
 myuser.name = "prueba";   // setter
 
 console.log(myuser.name); // getter
+
+
+// Métodos y propiedades estáticas
+
+class Api{
+    static ENDPOINT = "localhost:3000";          // Propiedad estática
+    static get(){
+        return new this();
+        //console.log("Soy un método estático");  // Método estático
+    }
+    name = "Hola"
+}
+
+// Usando la palabra reseervada static, eso quiere decir que podemos 
+// llamar a ese método sin instanciar a la clase
+Api.get();
+//console.log(Api.ENDPOINT);
+console.log(Api.get())
+
+class IsUser{
+    permission = 0;
+    static admin(){
+        let user = new this();
+        user.permission = 5;
+        return user;
+    }
+}
+console.log(IsUser.admin());
