@@ -178,3 +178,33 @@ class SuperAdmin extends User{
 let superadmin = new SuperAdmin("Administrator");
 console.log(superadmin);
 //superadmin.greeting();
+
+
+// Methods accessor (Encapsulación)
+
+
+class MyUser{
+    get name() {
+        return this._name.charAt(0).toUpperCase() + this._name.slice(1);
+        //return this._name;
+        //return "My name"; 
+    }
+    set name(name) {
+        if (typeof name !== "string") throw new Error("No es una cadena");
+        this._name = name;
+        //console.log(name); 
+    }
+}
+
+/*
+class MyUser{
+    constructor (name){this.name = name}
+}
+*/
+let myuser = new MyUser("nombre de ejemplo");
+//console.log(myuser.name); // get
+
+//myuser.name             // getter
+myuser.name = "prueba";   // setter
+
+console.log(myuser.name); // getter
