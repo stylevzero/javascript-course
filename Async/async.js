@@ -34,16 +34,21 @@ settled: 0 finalizada, cuando la promesa terminó ya sea con éxito o con algún
 
 let promesa = request("https://www.google.com");
 
-promesa.then(function(){ // la promesa se completó con éxito
+/*
+promesa.then(function(){ // método, la promesa se completó con éxito
         console.log("Terminé la petición");
 })
 promesa.catch(function(err){  // Cuando la promesa fue rejected o finalizo con algún problema o algún error
     console.log(err);
 });
 promesa.finally(function(err){ // Ejecuta código independientemente de si la promesa se completó con éxito o falló
-    console.log();
+    console.log("Finalice");
 })
+*/
+promesa.then(function(){ console.log("Terminé la petición")})
+    .catch(function(err){ console.log(err) })
+    .finally(function(err){ console.log("Finalice") });
+
 console.log("Esto se ejecuta después");
 
 // Callback de las promesas
-
