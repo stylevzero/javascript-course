@@ -1,3 +1,4 @@
+
 let p1 = new Promise((resolve, reject) => setTimeout(resolve, 500, "Hello World"));
 //let p1 = new Promise((resolve, reject) => setTimeout(reject, 100, "Error en la 1er promesa"));
 
@@ -11,6 +12,8 @@ Promise.all([p1,p2]).then(function(resultados){
     console.log(resultados);
     finalizado();
 }).catch(err => console.log(err));
+
+
 
 /*
 p1.then(function(r){
