@@ -15,9 +15,37 @@ function* counter(){
 }
 let generator = counter();
 
+
+// RETURN
+
+function* retornador(){
+    yield* counter();
+    console.log("Regresé");
+    /*
+    return 3;
+
+    yield 5; // No se ejecuta
+    */
+}
+
+let g = retornador();
+
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+console.log(g.next());
+
+// Delegar genreadores
+
+
+
+/*
 console.log(generator.next());
 console.log(generator.next());
 console.log(generator.next());
 console.log(generator.next());
 console.log(generator.next());
 console.log(generator.next());
+*/
