@@ -19,3 +19,11 @@
 // .{1,}\.com
 
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions#using_regular_expressions_in_javascript
+
+// Busquedas
+// Buscar un patron
+
+let texto = "Hello World this is javascript language 1";
+
+console.log(texto.search(/World/)); // 6
+console.log(texto.search(/\d/g));    // 40
